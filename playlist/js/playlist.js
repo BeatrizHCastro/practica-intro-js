@@ -42,11 +42,7 @@ const musicCatalog = () => {
    */
   const getAllPlaylists = () => {
 
-
-
-
-
-    
+    return structuredClone(playlists);
   };
 
   /**
