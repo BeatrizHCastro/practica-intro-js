@@ -176,20 +176,21 @@ Put JavaScript into practice by working with **objects and arrays**, **data tran
 ## Repository structure
 
 ```
+
 .
 ├── index.html
 ├── exercises/                 # JavaScript exercises
 │ ├── ejercicio1.js
 │ ├── bug.js
-│ ├── ejercicio3.js                 # 3.1 paths · 3.2 dashes between digits · 3.3 length+reverse
+│ ├── ejercicio3.js            # 3.1 paths · 3.2 dashes between digits · 3.3 length+reverse
 │ └── transform.js
-├── playlist/                 # Playlist mini-app (HTML/CSS/JS)
+├── playlist/                  # Playlist mini-app (HTML/CSS/JS)
 │ ├── playlist.html
 │ ├── css/
 │ └── js/
 │ ├── dom/
 │ └── playlist.js
-├── docs/                 # Screenshots embedded in the README
+├── docs/                      # Screenshots embedded in the README
 │ ├── ejercicio6-addsong-addplaylist.png
 │ └── ejercicio6-favoritsong.png
 ├── .gitignore
