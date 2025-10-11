@@ -67,8 +67,23 @@ const musicCatalog = () => {
    */
   const addSongToPlaylist = (playlistName, song) => {
 
+    const safeSong = { ...structuredClone(song), favorite: false };
 
-    
+    const updatedPlaylists = playlists.map((currentPlaylist) => {
+
+      if (currentPlaylist.name !== playlistName) {
+        return currentPlaylist;
+        }
+
+      const currentSongsCopy = structuredClone(currentPlaylist.songs);
+      
+      const nextSongs = [...currentSongsCopy, safeSong];
+
+      return { ...currentPlaylist, songs: nextSongs };
+    });
+
+    playlists = structuredClone(updatedPlaylists);
+  
   };
 
   /**
@@ -77,7 +92,12 @@ const musicCatalog = () => {
    * @param {string} title - The title of the song to remove.
    * @throws {Error} If the playlist or song is not found.
    */
-  const removeSongFromPlaylist = (playlistName, title) => {};
+  const removeSongFromPlaylist = (playlistName, title) => {
+
+
+
+    
+  };
 
   /**
    * Marks a song as a favorite or removes the favorite status.
