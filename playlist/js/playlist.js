@@ -118,7 +118,28 @@ const musicCatalog = () => {
    * @param {string} title - The title of the song to mark as a favorite.
    * @returns {void}
    */
-  const favoriteSong = (playlistName, title) => {};
+  const favoriteSong = (playlistName, title) => {
+
+    const updatedPlaylists = playlists.map((currentPlaylist) => {
+      
+      if (currentPlaylist.name !== playlistName) {
+        return currentPlaylist;
+      }
+
+      const songsCopy = structuredClone(currentPlaylist.songs);
+
+      const updatedSongs = songsCopy.map((songItem) =>
+        
+        songItem.title === title ? { ...songItem, favorite: true } : songItem
+      );
+
+      const updatedPlaylist = { ...currentPlaylist, songs: updatedSongs };
+
+      return updatedPlaylist;
+    });
+
+    playlists = structuredClone(updatedPlaylists);
+  };
 
   /**
    * Sorts songs in a specific playlist by a given criterion (title, artist, or duration).
