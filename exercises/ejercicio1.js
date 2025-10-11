@@ -1,6 +1,3 @@
-console.log("BEA")
-
-
 const user = {
   firstName: 'Beatriz',
   lastName: 'H Castro',
