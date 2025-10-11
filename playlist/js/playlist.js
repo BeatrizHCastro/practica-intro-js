@@ -49,7 +49,15 @@ const musicCatalog = () => {
    * Removes a playlist from the catalog.
    * @param {string} playlistName - The name of the playlist to remove.
    */
-    const removePlaylist = (playlistName) => {};
+    const removePlaylist = (playlistName) => {
+
+        const remainingPlaylists = playlists.filter((currentPlaylist) => {
+
+          return currentPlaylist.name !== playlistName;
+        });
+
+        playlists = structuredClone(remainingPlaylists);
+    };
 
   /**
    * Adds a song to a specific playlist.
@@ -57,7 +65,11 @@ const musicCatalog = () => {
    * @param {{ title: string, artist: string, genre: string, duration: number }} song - The song to add to the playlist.
    * @throws {Error} If the playlist is not found.
    */
-  const addSongToPlaylist = (playlistName, song) => {};
+  const addSongToPlaylist = (playlistName, song) => {
+
+
+    
+  };
 
   /**
    * Removes a song from a specific playlist.
