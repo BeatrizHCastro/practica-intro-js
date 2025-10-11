@@ -93,10 +93,19 @@ const musicCatalog = () => {
    * @throws {Error} If the playlist or song is not found.
    */
   const removeSongFromPlaylist = (playlistName, title) => {
+  const updatedPlaylists = playlists.map((currentPlaylist) => {
+    if (currentPlaylist.name !== playlistName) {
+      return currentPlaylist;
+    }
 
+    const songsCopy = structuredClone(currentPlaylist.songs);
+    const songsWithoutTitle = songsCopy.filter((song) => song.title !== title);
+    const updatedPlaylist = { ...currentPlaylist, songs: songsWithoutTitle };
 
+    return updatedPlaylist;
+  });
 
-    
+  playlists = structuredClone(updatedPlaylists);
   };
 
   /**
