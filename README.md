@@ -234,7 +234,7 @@ cd practica-intro-js
 
 ### Song marked as favorite
 
-![ejercicio6 – favorite song](./docs/ejercicio6-favoritsong.png)
+![ejercicio6 – favorite song](./docs/ejercicio6-favsong.png)
 
 ## Requirements
 
