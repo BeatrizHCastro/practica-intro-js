@@ -1,9 +1,10 @@
-// Sustituimos en el for <= por <. Con < el bucle va 0 hasta length - 1
+// Solución: sustituimos en el for <= por <
+// Con < el bucle va 0 hasta length - 1 (no NaN) 
 
 const calcularPromedio = (numeros) => {
   let sumaTotal = 0;
 
-  for (let i = 0; i < numeros.length; i++) {
+  for (let i = 0; i <= numeros.length; i++) {
     sumaTotal += numeros[i];
   }
 
