@@ -55,3 +55,31 @@ formatNumberWithDashes(numberInput2); // 1
 formatNumberWithDashes(numberInput3); // 1-1-2-3-4
 
 // console.log(formatNumberWithDashes(numberInput3))
+
+
+
+// 3.3 Inputs exercise
+
+const textInput1 = 'string';
+const textInput2 = 'variable';
+const textInput3 = 'pointer';
+
+// 3.3 Create here your function
+
+const getLengthAndReverse = (textValue) => {
+  
+  const textCopy = structuredClone(textValue);
+
+  let reversedText = '';
+  for (let index = textCopy.length - 1; index >= 0; index--) {
+    reversedText = reversedText + textCopy[index];
+  }
+
+  return `${textCopy.length} ${reversedText}`;
+};
+
+getLengthAndReverse(textInput1); // '6 gnirts'
+getLengthAndReverse(textInput2); // '8 elbairav'
+getLengthAndReverse(textInput3); // '7 retniop'
+
+// console.log(getLengthAndReverse(textInput2))
